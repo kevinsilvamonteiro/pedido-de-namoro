@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer Namorar Comigo?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe0b2;
+            margin: 0;
+            flex-direction: column;
+        }
+        h1 {
+            color: #e64a19;
+        }
+        button {
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .yes {
+            background-color: #4caf50;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #388e3c;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+        .no:hover {
+            background-color: #d32f2f;
+        }
+        .no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quer namorar comigo?</h1>
+
+<button class="yes" onclick="showLoveMessage()">Sim</button>
+<button class="no" onclick="moveButton()">Não</button>
+
+<script>
+    function showLoveMessage() {
+        alert("Você é a pessoa mais especial do mundo! 💖");
+    }
+
+    function moveButton() {
+        const noButton = document.querySelector('.no');
+        noButton.style.top = `${Math.random() * 300}px`;
+        noButton.style.left = `${Math.random() * 300}px`;
+    }
+</script>
+
+</body>
+</html>
